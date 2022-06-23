@@ -1,7 +1,11 @@
 #body{
-    width: 900px;
+    max-width: 900px;
+    width:98%;
     margin: auto;
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 #header{
@@ -40,6 +44,15 @@
     padding-top: 1%;
 }
 
+
+
+#last_employ{
+    display: flex;
+    align-items: center;
+    
+}
+
+
 #former_employer{
     background-color: lightgreen;
     border: none;
@@ -48,10 +61,44 @@
 
 #emergency{
     border-style: solid;
-    padding: 3%;
+    padding: 2%;
+    margin: 2% 0 2% 0;
 }
 
 #disclaimer{
     font-weight: bold;
     font-size: 10px;
+}
+
+@media (max-width: 900px){
+    #body{
+        
+        margin: auto;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
+@media (max-width: 800px){
+    #body{
+        
+        margin: auto;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
+@media (max-width: 700px){
+    #body{
+        
+        margin: auto;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
