@@ -17,29 +17,32 @@
           <p1>
               CARIBOU REHAB and NURSING CENTER
           </p1>
+          <br>
           <p2>
               10 Bernadette Street<br>
               Caribou, Maine 04736
           </p2>
+          <br>
+          <br>
           <p3>
               EMPLOYMENT APPLICATION
           </p3>
         </div>
-
+        <br>
+        <br>
+        <br>
         <div id="personal_info">
             <form>
                 <!--name field-->
-                <label for="fname">FIRST NAME:</label>
-                <input type="text" id="fname" name="fname"><br><br>
+                <label for="name">NAME:</label>
+                <input type="text" id="name" name="name" size="30px" placeholder="Last First M.I.">
                 
-                <label for="lname">LAST NAME AND MIDDLE INITIAL:</label>
-                <input type="text" id="lname" name="lname"><br><br>
                 <!--date-->
                 <label for="date">DATE:</label>
                 <input type="date" id="date" name="date"><br><br>
                 <!--address and phone number-->
                 <label for="streetaddress">STREET ADDRESS:</label>
-                <input type="text" id="street" name="streetaddress">
+                <input type="text" id="street" name="streetaddress" size="30px">
                 
                 <label for="mailingaddress">MAILING ADDRESS:</label>
                 <input type="text" id="mailing" name="mailingaddress"><br><br>
@@ -48,27 +51,34 @@
                 <input type="text" id="city" name="city">
 
                 <label for="state">STATE:</label>
-                <input type="text" id="state" name="state" maxlength="2">
+                <input type="text" id="state" name="state" maxlength="2" size="5px">
 
                 <label for="zip">ZIP CODE:</label>
                 <input type="text" name="zip" id="zip" maxlength="5">
+                <br>
+                <br>
 
                 <label for="homephone">HOME TELEPHONE #:</label>
-                <input type="text" name="homephone" id="homephone"><br><br>
+                <input type="tel" name="homephone" id="homephone" placeholder="(xxx)-xxx-xxxx">
 
                 <label for="cellphone">CELL PHONE #:</label>
-                <input type="text" name="cellphone" id="cellphone">
+                <input type="tel" name="cellphone" id="cellphone" placeholder="(xxx)-xxx-xxxx">
             </form>
         </div>
+        <br>
+        <br>
         <!--section outlining what the applicant would like to get out of this job-->
         <div id="job_info">
             <form>
                 <label for="eligible">ARE YOU ELIGIBLE TO BE LAWFULLY EMPLOYED IN THE U.S.?</label><br>
                 <p1>(Proof of citizenship or eligibility to work in the USA is required upon employment).
                 </p1>
-                <input type="radio" id="eligible" name="yes" value="YES">
-                <input type="radio" id="eligible" name="no" value="NO">
-
+                <br>
+                <input type="radio" id="eligible" name="eligible" value="yes"> YES
+                <input type="radio" id="eligible" name="eligible" value="no"> NO
+                <br>
+                <br>
+                
                 <label for="position">POSITION DESIRED:</label>
                 <input type="text" name="position" id="position">
 
@@ -78,68 +88,91 @@
                 <br>
 
                 <label for="time">DO YOU WANT:</label>
-                <input type="radio" name="fulltime" id="time" value="FULL TIME (30-40 hrs. week)">
-                <input type="radio" name="partime" id="time" value="PART TIME (16-29 hrs. week)">
-                <input type="radio" name="partime" id="time" value="CASUAL PART TIME (0-15 hrs. week)">
+                <input type="radio" name="time" id="full_time" value="full_time"> FULL TIME (30-40 hrs. week)
+                <input type="radio" name="time" id="part_time" value="part_time"> PART TIME (16-29 hrs. week)
+                <input type="radio" name="time" id="casual_time" value="casual_time"> CASUAL PART TIME (0-15 hrs. week)
                 <br>
                 <br>
 
                 <label for="shift">SHIFTS DESIRED:</label>
-                <input type="text" name="shift" id="shift">
+                <input type="text" name="shift" id="shift" placeholder="First or Second">
                 <label for="startdate">DATE YOU CAN START:</label>
-                <input type="text" name="startdate" id="startdate">
+                <input type="date" name="startdate" id="startdate">
                 <br>
                 <br>
 
                 <label for="weekend">SINCE WE OPERATE 7 DAYS A WEEK DO YOU HAVE A PROBLEM WITH WORKING WEEKENDS?</label>
-                <input type="radio" class="weekend" name="yes" value="yes">
-                <input type="radio" class="weekend" name="no" value="no">
-
+                <br>
+                <input type="radio" id="weekend" name="weekend" value="yes"> YES
+                <input type="radio" id="weekend" name="weekend" value="no"> NO
+                <br>
+                <br>
             </form>
         </div>
         <!--section outlining possible criminal history-->
         <div id="background">
             <form>
                 <label for="check"><strong>REGULATIONS REQUIRE WE OBTAIN A BACKGROUND CHECK FOR ALL EMPLYEE APPLICANTS. A SEPARATE FOR THAT ASKS FOR YOU DATE OF BIRTH, SOCIAL SECURITY AND DRIVERS LICENSE NUMBERS WILL BE COMPLETED BY YOU AT THE TIME OF YOUR IN-PERSON INTERVIEW. ARE YOU WILLING TO PROVIDE THIS INFORMATION TO US TO COMPLETE THE BACKGROUND CHECK?</strong></label>
-                <input type="radio" class="check" name="yes" value="YES">
-                <input type="radio" class="check" name="no" value="NO">
+                <br>
+                <input type="radio" id="check" name="check" value="yes"> YES
+                <input type="radio" id="check" name="check" value="no"> NO 
+
+                <br>
+                <br>
 
                 <label for="convicted">HAVE YOU EVER BEEN CONVICTED OF A CRIME OR PLED GUILTY, "NOLO" OR NO CONTEST?<br>
                 IF YES, PLEASE LIST APPROXIMATE DATE, NATURE OF OFFENSE, LOCATION, STATUS AND PENALTY.</label>
-                <input type="radio" class="convicted" name="yes" value="YES">
-                <input type="radio" class="convicted" name="no" value="NO">
-                <input type="text" class="convicted" name="convicted">
+                <br>
+                <input type="radio" id="convicted" name="convicted" value="yes"> YES
+                <input type="radio" id="convicted" name="convicted" value="no"> NO 
                 <br> 
+                <input type="text" id="convicted" name="convicted" size="90px">
+                <br> 
+                <br>
 
                 <label for="sanctioned">ARE YOU CURRENTLY SANCTIONED (DENIED) FROM PARTICIPATION IN MEDICARE OR MEDICADE PROGRAMS?</label>
-                <input type="radio" class="sanctioned" name="yes" value="YES">
-                <input type="radio" class="santioned" name="no" value="NO">
+                <br>
+                <input type="radio" id="sanctioned" name="sanctioned" value="yes"> YES
+                <input type="radio" id="santioned" name="sanctioned" value="no"> NO
+                <br>
                 <br>
 
                 <label for="crime">HAVE YOU EVER BEEN CONVICTED OF AN OFFENSE THAT WOULD PRECLUDE YOUR EMPLOYMENT IN A NURSING FACILITY?</label>
-                <input type="radio" class="crime" name="yes" value="YES">
-                <input type="radio" class="crime" name="no" value="NO">
                 <br>
-
+                <input type="radio" id="crime" name="crime" value="yes"> YES
+                <input type="radio" id="crime" name="crime" value="no"> NO
+                <br>
+                <br>
                 <label for="disciplined">HAVE YOU EVER BEED DISCIPLINED BY A LICENSING BOARD?</label>
-                <input type="radio" class="disciplined" name="yes" value="YES">
-                <input type="radio" class="disciplined" name="no" value="NO">
+                <br>
+                <input type="radio" id="disciplined" name="disciplined" value="yes"> YES
+                <input type="radio" id="disciplined" name="disciplined" value="no"> NO
+                <br>
                 <br>
 
-                <label for="prior_job">HAVE YOU EVER BEEN DISCIPLINED OR HAD ANY ATTENDANCE PROBLEMS IN YOUR PRIOR JOB(S)? IF YES PLEASE EXPLAIN</label>
-                <input type="radio" class="prior_job" name="yes" value="YES">
-                <input type="radio" class="prior_job" name="no" value="NO">
-                <input type="text" class="prior_job" name="explanation">
+                <label for="prior_job">HAVE YOU EVER BEEN DISCIPLINED OR HAD ANY ATTENDANCE PROBLEMS IN YOUR PRIOR JOB(S)?</label>
+                <br>
+                <input type="radio" id="prior_job" name="prior" value="yes"> YES
+                <input type="radio" id="prior_job" name="prior" value="no"> NO
+                <br
+                <p1>IF YES PLEASE EXPLAIN:</p1>
+                <input type="text" id="prior_job" name="explanation" size="90px">
+                <br>
                 <br>
 
-                <label for="saftey">HAVE YOU EVER BEEN DISCIPLINED FOR OTHER REASONS OR HAD ANY SAFETY PROBLEMS IN YOUR PRIOR JOB(S)? IF YES PLEASE EXPLAIN</label>
-                <input type="radio" class="saftey" name="yes" value="YES">
-                <input type="radio" class="saftey" name="no" value="NO">
-                <input type="text" class="saftey" name="explanation">
+                <label for="saftey">HAVE YOU EVER BEEN DISCIPLINED FOR OTHER REASONS OR HAD ANY SAFETY PROBLEMS IN YOUR PRIOR JOB(S)?</label>
+                <br>
+                <input type="radio" id="saftey" name="saftey" value="yes"> YES
+                <input type="radio" id="saftey" name="saftey" value="no"> NO
+                <br>
+                <p1> IF YES PLEASE EXPLAIN:</p1>
+                <input type="text" class="saftey" name="explanation" size="90px">
+                <br>
                 <br>
 
                 <label for="credentials">PLEASE LIST PROFESSIONAL LICENSES, CERTIFICATIONS OR REGISTRATIONS YOU HAVE:</label>
-                <input type="text" id="credentials" name="credentials">
+                <br>
+                <input type="text" id="credentials" name="credentials" size="90px">
             </form>        
         </div>
   </div>  
