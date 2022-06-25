@@ -1,0 +1,291 @@
+p{
+	margin-block-start: 0px;
+    margin-block-end: 0px;	
+}
+
+button{
+		cursor:pointer;
+}
+
+#body{
+    max-width: 900px;
+    width:98%;
+    margin: auto;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#header{
+    text-align: center;
+}
+
+#header > p1{
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#header > p2{
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#header > p3{
+    
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#background > p1{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#education > form > h3{
+    margin-bottom: 0;
+}
+
+#education > form > p1{
+    font-size: 11px;
+    padding-top: 1%;
+}
+
+.subTextSpan{
+	font-size:13px;
+}
+
+#personal_info{
+	display: block;
+}
+
+#name_date{
+	display: block;
+}
+
+.pers_cont{
+	display: block;
+	
+	width: 98%;
+}
+
+#name > input{
+	width: 70%;
+}
+.row_cont{
+	display: inline;
+	width: 49%;
+	float: left;
+}
+
+#local{
+	display: block;
+	width: 98%;
+}
+
+
+.local_col_1{
+	display: inline;
+	float: left;
+	width: 30%;
+}
+.local_col_2{
+	display: inline;
+	float: left;
+	width: 30%;
+}
+.local_col_3{
+	display: inline;
+	float: left;
+	width: 30%;
+}
+#mail{
+	display: inline;
+	float: left;
+	width: 49%;
+}
+
+#education{
+	display: block;
+	width: 98%;
+}
+
+#education > h3{
+	margin-bottom: 0%;
+}
+#school_1{
+	display: block;
+}
+
+.schl_row_1{
+	display: inline;
+	
+	width: 100%;
+}
+
+.schl_name{
+	display: inline;
+	float: left;
+	width: 59%;
+}
+
+.schl_row_2{
+	display: inline;
+	width: 100%;
+}
+
+.graduate{
+	display: inline;
+	float: left;
+	width: 59%;
+}
+#last_employ{
+    display: block;
+    /*align-items: center; */
+    
+}
+
+#phone{
+	display: block;
+	width: 98%;
+
+}
+
+.phone_col_1{
+	display:inline;
+	float:left;
+	width:59%;
+}
+
+#home_phone > input{
+	width:25%
+}
+
+#cell_phone > input{
+	width:32%
+}
+.phone_col_2{
+	display:inline;
+	float:left;
+	width:39%;
+}
+
+#shifts{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+.shifts{
+	display: flex;
+	
+}
+.rowCont{
+	display:block;
+	width:98%;
+}
+
+.empCol1Cont{
+		display:inline;
+		float:left;
+		width:59%;
+}
+
+.empCol2Cont{
+		display:inline;
+		float:left;
+		width:40%;
+}
+
+.empiCol1Cont{
+		display:inline;
+		float:left;
+		width:56%;
+}
+
+.empiCol2Cont{
+		display:inline;
+		float:left;
+		width:40%;
+}
+
+.subRow{
+		padding-top:10px;
+}
+
+br.clearfix{
+	clear:both;
+	display:block;
+	height:1px;
+	margin:-1px 0 0 0;
+}
+
+.empCol1Cont input{
+		width:90%;
+}
+
+.empiCol1Cont input{
+		width:90%;
+}
+
+.empCol2Cont input{
+		width:90%;
+}
+
+.empiCol2Cont input{
+		width:90%;
+}
+
+#licenses{
+	width: 98%;
+}
+#former_employer{
+    background-color: lightgreen;
+    border: none;
+    border-radius: 8px;
+}
+#more_info > input{
+	width: 98%;
+}
+#emergency{
+    border-style: solid;
+    padding: 2%;
+    margin: 2% 0 2% 0;
+}
+
+#disclaimer{
+    font-weight: bold;
+    font-size: 10px;
+}
+
+
+
+
+@media only screen and (min-width: 960px) {
+
+}
+
+@media only screen and (max-width: 959px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+	#body{width:100%;}
+	.empCol1Cont{width:98%}
+	.empCol2Cont{width:98%}
+	.empCol1Cont input{width:100%;}
+	.empCol2Cont input{width:100%;}
+	.empiCol1Cont{width:98%}
+	.empiCol2Cont{width:98%}
+	.empiCol1Cont input{width:100%;}
+	.empiCol2Cont input{width:100%;}
+	#emp1_row1_col2{padding-top:10px;}
+	#emp1_row6_col2{display:none;}
+}
+

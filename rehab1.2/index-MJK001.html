@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-MJK001.css">
+     
+    <title>Employment Application</title>
+	
+	<script type="text/javascript">
+		function toggleEmployer(empnum){
+			if(document.getElementById(empnum)){
+				var s = document.getElementById(empnum).style.display;
+				if(s == "block"){
+					document.getElementById(empnum).style.display="none";
+				} else {
+					document.getElementById(empnum).style.display="block";
+				}
+			}
+		}
+	</script>
+
+</head>
+<body>
+  <!-- body of the application with an overall width of 900 px -->
+    <div id="body">
+      <!--main header at the top of the application-->
+        <div id="header">
+          <p1>
+              CARIBOU REHAB and NURSING CENTER
+          </p1>
+          <br>
+          <p2>
+              10 Bernadette Street<br>
+              Caribou, Maine 04736
+          </p2>
+          <br>
+          <br>
+          <p3>
+              EMPLOYMENT APPLICATION
+          </p3>
+        </div>
+        <br>
+        <br>
+        <br>
+		<form id="empform">
+			<div id="personal_info">
+                <!--name field-->
+                <div id="name_date" class="pers_cont">    
+                    <div id="name" class="row_cont">
+                        <label for="name">NAME:</label>
+                        <input type="text" id="name" name="name" placeholder="Last First M.I.">
+                    </div>
+                    <div id="date" class="pers_cont">           
+                        <label for="date">DATE:</label>
+                        <input type="date" id="date" name="date"><br><br>
+                    </div>
+                    <br class="clearfix" />    
+                </div>    
+                <!--mailing address container-->
+                <div id="contact" class="pers_cont">
+                    <div id="street" class="row_cont">
+                        <label for="streetaddress">STREET ADDRESS:</label>
+                        <input type="text" id="street" name="streetaddress">
+                    </div>  
+                    <div id="mail" >
+                        <label for="mailingaddress">MAILING ADDRESS:</label>
+                        <input type="text" id="mailing" name="mailingaddress"><br><br>
+                    </div>
+                    <br class="clearfix" />    
+                </div>
+                 <!--city state zip container-->   
+                <div id="local" class="local">
+                    <div id="city" class="local_col_1">
+                        <label for="city">CITY:</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div id="state" class="local_col_2">
+                        <label for="state">STATE:</label>
+                        <input type="text" id="state" name="state" maxlength="2">
+                    </div>
+                    <div id="zip" class="local_col_3">
+                        <label for="zip">ZIP CODE:</label>
+                        <input type="text" name="zip" id="zip" maxlength="5">
+                    </div>
+                    <br class="clearfix" />
+                    <br>
+                </div>
+                <!--telephone number container-->   
+                <div id="phone" class="phone">    
+                    <div id="home_phone" class="phone_col_1">
+                        <label for="homephone">HOME TELEPHONE #:</label>
+                        <input type="tel" name="homephone" id="homephone" placeholder="(xxx)-xxx-xxxx">
+                    </div>
+                    <div id="cell_phone" class="phone_col_2">
+                        <label for="cellphone">CELL PHONE #:</label>
+                        <input type="tel" name="cellphone" id="cellphone" placeholder="(xxx)-xxx-xxxx">
+                    </div>
+                    <br class="clearfix" />
+                </div>
+			</div>
+			<p>&nbsp;</p>
+			
+        <!--section outlining what the applicant would like to get out of this job-->
+			<div id="job_info">
+                <label for="eligible">ARE YOU ELIGIBLE TO BE LAWFULLY EMPLOYED IN THE U.S.?&nbsp;&nbsp;<span class="subTextSpan">(Proof of citizenship or eligibility to work in the USA is required upon employment).</span></label>
+                <br>
+                <input type="radio" id="eligible" name="eligible" value="yes"> YES
+                <input type="radio" id="eligible" name="eligible" value="no"> NO
+                <br>
+                <br>
+                
+                <label for="position">POSITION DESIRED:</label>
+                <input type="text" name="position" id="position">
+
+                <label for="salary">SALARY DESIRED:</label>
+                <input type="text" name="salary" id="salary">
+                
+                <br>
+
+                <label for="time">DO YOU WANT:</label>
+                <input type="radio" name="time" id="full_time" value="full_time"> FULL TIME (30-40 hrs. week)
+                <input type="radio" name="time" id="part_time" value="part_time"> PART TIME (16-29 hrs. week)
+                <input type="radio" name="time" id="casual_time" value="casual_time"> CASUAL PART TIME (0-15 hrs. week)
+                <br>
+                <br>
+                <div id="shifts">
+                <label for="shift">SHIFTS DESIRED:</label>
+                    <div class="shifts">
+                        <p>DAY</p> <input type="checkbox" name="day" id="day" value="day">
+                    </div>
+                    <div class="shifts">    
+                        <p>EVENING</p><input type="checkbox" name="evening" id="evening" value="evening">
+                    </div>
+                    <div class="shifts">
+                        <p>NIGHT</p><input type="checkbox" name="night" id="night" value="night">
+                    </div>    
+                </div>
+                <br>
+                <label for="startdate">DATE YOU CAN START:</label>
+                <input type="date" name="startdate" id="startdate">
+                <br>
+                <br>
+
+                <label for="weekend">SINCE WE OPERATE 7 DAYS A WEEK DO YOU HAVE A PROBLEM WITH WORKING WEEKENDS?</label>
+                <br>
+                <input type="radio" id="weekend" name="weekend" value="yes"> YES
+                <input type="radio" id="weekend" name="weekend" value="no"> NO
+                <p>&nbsp;</p>
+			</div>
+        <!--section outlining possible criminal history-->
+			<div id="background">
+                <label for="check"><strong>REGULATIONS REQUIRE WE OBTAIN A BACKGROUND CHECK FOR ALL EMPLYEE APPLICANTS. A SEPARATE FOR THAT ASKS FOR YOU DATE OF BIRTH, SOCIAL SECURITY AND DRIVERS LICENSE NUMBERS WILL BE COMPLETED BY YOU AT THE TIME OF YOUR IN-PERSON INTERVIEW. ARE YOU WILLING TO PROVIDE THIS INFORMATION TO US TO COMPLETE THE BACKGROUND CHECK?</strong></label>
+                <br>
+                <input type="radio" id="check" name="check" value="yes"> YES
+                <input type="radio" id="check" name="check" value="no"> NO 
+
+                <p>&nbsp;</p>
+
+                <label for="convicted">HAVE YOU EVER BEEN CONVICTED OF A CRIME OR PLED GUILTY, "NOLO" OR NO CONTEST?<br>
+                IF YES, PLEASE LIST APPROXIMATE DATE, NATURE OF OFFENSE, LOCATION, STATUS AND PENALTY.</label>
+                <br>
+                <input type="radio" id="convicted" name="convicted" value="yes"> YES
+                <input type="radio" id="convicted" name="convicted" value="no"> NO 
+                <br> 
+                <input type="text" id="convicted" name="convicted">
+                
+				<p>&nbsp;</p>
+
+                <label for="sanctioned">ARE YOU CURRENTLY SANCTIONED (DENIED) FROM PARTICIPATION IN MEDICARE OR MEDICADE PROGRAMS?</label>
+                <br>
+                <input type="radio" id="sanctioned" name="sanctioned" value="yes"> YES
+                <input type="radio" id="santioned" name="sanctioned" value="no"> NO
+                
+				<p>&nbsp;</p>
+
+                <label for="crime">HAVE YOU EVER BEEN CONVICTED OF AN OFFENSE THAT WOULD PRECLUDE YOUR EMPLOYMENT IN A NURSING FACILITY?</label>
+                <br>
+                <input type="radio" id="crime" name="crime" value="yes"> YES
+                <input type="radio" id="crime" name="crime" value="no"> NO
+                
+				<p>&nbsp;</p>
+				
+                <label for="disciplined">HAVE YOU EVER BEED DISCIPLINED BY A LICENSING BOARD?</label>
+                <br>
+                <input type="radio" id="disciplined" name="disciplined" value="yes"> YES
+                <input type="radio" id="disciplined" name="disciplined" value="no"> NO
+                
+				<p>&nbsp;</p>
+
+                <label for="prior_job">HAVE YOU EVER BEEN DISCIPLINED OR HAD ANY ATTENDANCE PROBLEMS IN YOUR PRIOR JOB(S)?</label>
+                <br>
+                <input type="radio" id="prior_job" name="prior" value="yes"> YES
+                <input type="radio" id="prior_job" name="prior" value="no"> NO
+                <br>
+                <p1>IF YES PLEASE EXPLAIN:</p1>
+                <input type="text" id="prior_job" name="explanation">
+                
+				<p>&nbsp;</p>
+
+                <label for="saftey">HAVE YOU EVER BEEN DISCIPLINED FOR OTHER REASONS OR HAD ANY SAFETY PROBLEMS IN YOUR PRIOR JOB(S)?</label>
+                <br>
+                <input type="radio" id="saftey" name="saftey" value="yes"> YES
+                <input type="radio" id="saftey" name="saftey" value="no"> NO
+                <br>
+                <p1> IF YES PLEASE EXPLAIN:</p1>
+                <input type="text" class="saftey" name="explanation">
+                <br>
+                <br>
+
+                <label for="credentials">PLEASE LIST PROFESSIONAL LICENSES, CERTIFICATIONS OR REGISTRATIONS YOU HAVE:</label>
+                <br>
+                <input id="licenses" type="text" id="credentials" name="credentials">     
+			</div>
+        <!--education table-->
+			<div id="education">
+                <h3>EDUCATION</h3>
+                <p1>(MOST RECENT FIRST:)</p1>
+                <br>
+                <br>
+                <p><b>School 1</b></p>
+                <div id="school_1">
+                    <div id="schl_row_1" class="schl_row_1">
+                        <div id="sch_row1_col_1" class="schl_name">
+                            <label for="school_name">School Name</label>
+                            <input type="text" id="school_name" name="school_name" placeholder="School Name">
+                        </div>
+                        <div id="schl_row1_col2" class="schl_row_1_cont">
+                            <label for="major">Major</label>
+                            <input type="text" id="major" name="major" placeholder="Major">
+                        </div>
+                    <br class="clearfix" />
+                    </div>
+                    <br>
+                    <div id="schl_row_2" class="schl_row_2">
+                        <div id="schl_row2_col1" class="graduate">
+                            <label for="major">Did You Graduate</label>
+                            <input type="radio" name="major" id="major" value="yes">Yes
+                            <input type="radio" name="major" id="major" value="no">No
+                        </div>
+                        <div id="schl_row2_col2" class="degree">
+                            <label for="degree">Degree</label>
+                            <input type="text" id="degree" name="degree" placeholder="Degree">
+                        </div>
+                    <br class="clearfix" />    
+                    </div>
+                </div>
+
+                <p><b>School 2</b></p>
+                <div id="school_2">
+                    <div id="schl_row_1" class="schl_row_1">
+                        <div id="sch_row1_col_1" class="schl_name">
+                            <label for="school_name">School Name</label>
+                            <input type="text" id="school_name" name="school_name" placeholder="School Name">
+                        </div>
+                        <div id="schl_row1_col2" class="schl_row_1_cont">
+                            <label for="major">Major</label>
+                            <input type="text" id="major" name="major" placeholder="Major">
+                        </div>
+                    <br class="clearfix" />
+                    </div>
+                    <br>
+                    <div id="schl_row_2" class="schl_row_2">
+                        <div id="schl_row2_col1" class="graduate">
+                            <label for="major">Did You Graduate</label>
+                            <input type="radio" name="major" id="major" value="yes">Yes
+                            <input type="radio" name="major" id="major" value="no">No
+                        </div>
+                        <div id="schl_row2_col2" class="degree">
+                            <label for="degree">Degree</label>
+                            <input type="text" id="degree" name="degree" placeholder="Degree">
+                        </div>
+                    <br class="clearfix" />    
+                    </div>
+                </div>
+
+                <p><b>School 2</b></p>
+                <div id="school_2">
+                    <div id="schl_row_1" class="schl_row_1">
+                        <div id="sch_row1_col_1" class="schl_name">
+                            <label for="school_name">School Name</label>
+                            <input type="text" id="school_name" name="school_name" placeholder="School Name">
+                        </div>
+                        <div id="schl_row1_col2" class="schl_row_1_cont">
+                            <label for="major">Major</label>
+                            <input type="text" id="major" name="major" placeholder="Major">
+                        </div>
+                    <br class="clearfix" />
+                    </div>
+                    <br>
+                    <div id="schl_row_2" class="schl_row_2">
+                        <div id="schl_row2_col1" class="graduate">
+                            <label for="major">Did You Graduate</label>
+                            <input type="radio" name="major" id="major" value="yes">Yes
+                            <input type="radio" name="major" id="major" value="no">No
+                        </div>
+                        <div id="schl_row2_col2" class="degree">
+                            <label for="degree">Degree</label>
+                            <input type="text" id="degree" name="degree" placeholder="Degree">
+                        </div>
+                    <br class="clearfix" />    
+                    </div>
+                </div>
+			</div>
+        <!--employment history section-->
+			<div id="employment_history">
+				<h3>EMPLOYMENT HISTORY</h3>
+           
+            <div id="last_employ">
+				<div id="emp1_row1_cont" class="rowCont">
+					<div id="emp1_row1_col1" class="empCol1Cont">
+						<label for="employer">Present or last employer</label>
+                        <input type="text" name="employer">
+					</div>
+							
+					<div id="emp1_row1_col2" class="empCol2Cont">
+						<label for="telephone_number">Telephone Number</label>
+                        <input type="tel" name="telephone_number">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row2_cont" class="rowCont">
+					<div id="emp1_row2_col1" class="empCol1Cont subRow">
+						<label for="address">Complete Address:</label>
+                        <input type="text" name="address">
+					</div>
+							
+					<div id="emp1_row2_col2" class="empCol2Cont subRow">
+						<label for="supervisor">Supervisors Name and Title</label>   
+                        <input type="text" name="supervisor">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row3_cont" class="rowCont">
+					<div id="emp1_row3_col1" class="empCol1Cont subRow">
+						
+						
+						<div id="emp1_row3_inner" class="rowCont">
+							<div id="emp1_row3_icol1" class="empiCol1Cont">
+								<label for="from">From</label>
+								<input type="date" name="from">
+							</div>
+							
+							<div id="emp1_row3_icol2" class="empiCol2Cont">
+								<label for="to">To</label>
+								<input type="date" name="to">
+							</div>
+						
+							<br class="clearfix" />
+						</div>
+					</div>
+							
+					<div id="emp1_row3_col2" class="empCol2Cont subRow">
+						<label for="last_check">Last Weekly Pay:</label>
+                        <input type="text" name="last_check">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				
+				<div id="emp1_row4_cont" class="rowCont">
+					<div id="emp1_row4_col1" class="empCol1Cont subRow">
+						<label for="title">Your Title:</label>
+                        <input type="text" name="title">
+					</div>
+							
+					<div id="emp1_row4_col2" class="empCol2Cont subRow">
+						<label for="duties">Duties:</label>
+                        <input type="text" name="duties">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row5_cont" class="rowCont">
+					<div id="emp1_row5_col1" class="empCol1Cont subRow">
+						<label for="supervised">Number and Titles of Employees you supervised:</label>
+                        <input type="text" name="supervised" >
+					</div>
+							
+					<div id="emp1_row5_col2" class="empCol2Cont subRow">
+						<label for="hours">Hours Per Week</label>   
+                        <input type="text" name="hours" maxlength="2">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				
+				<div id="emp1_row6_cont" class="rowCont">
+					<div id="emp1_row6_col1" class="empCol1Cont subRow">
+						<label for="leaving">Reason for leaving</label>
+                        <input type="text" name="leaving">
+					</div>
+					
+					<div id="emp1_row6_col2" class="empCol2Cont subRow">
+						<label for="hours">&nbsp;</label>
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				    
+            </div>
+			
+            <p>&nbsp;</p>
+			
+            <button type="button" id="former_employer" name="btnemployer2" onclick="toggleEmployer('employer_2');">Employer 2</button>
+            <div id="employer_2" style="display:none;">
+                <div id="emp1_row1_cont" class="rowCont">
+					<div id="emp1_row1_col1" class="empCol1Cont">
+						<label for="employer">Present or last employer</label>
+                        <input type="text" name="employer">
+					</div>
+							
+					<div id="emp1_row1_col2" class="empCol2Cont">
+						<label for="telephone_number">Telephone Number</label>
+                        <input type="tel" name="telephone_number">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row2_cont" class="rowCont">
+					<div id="emp1_row2_col1" class="empCol1Cont subRow">
+						<label for="address">Complete Address:</label>
+                        <input type="text" name="address">
+					</div>
+							
+					<div id="emp1_row2_col2" class="empCol2Cont subRow">
+						<label for="supervisor">Supervisors Name and Title</label>   
+                        <input type="text" name="supervisor">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row3_cont" class="rowCont">
+					<div id="emp1_row3_col1" class="empCol1Cont subRow">
+						
+						
+						<div id="emp1_row3_inner" class="rowCont">
+							<div id="emp1_row3_icol1" class="empiCol1Cont">
+								<label for="from">From</label>
+								<input type="date" name="from">
+							</div>
+							
+							<div id="emp1_row3_icol2" class="empiCol2Cont">
+								<label for="to">To</label>
+								<input type="date" name="to">
+							</div>
+						
+							<br class="clearfix" />
+						</div>
+					</div>
+							
+					<div id="emp1_row3_col2" class="empCol2Cont subRow">
+						<label for="last_check">Last Weekly Pay:</label>
+                        <input type="text" name="last_check">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				
+				<div id="emp1_row4_cont" class="rowCont">
+					<div id="emp1_row4_col1" class="empCol1Cont subRow">
+						<label for="title">Your Title:</label>
+                        <input type="text" name="title">
+					</div>
+							
+					<div id="emp1_row4_col2" class="empCol2Cont subRow">
+						<label for="duties">Duties:</label>
+                        <input type="text" name="duties">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row5_cont" class="rowCont">
+					<div id="emp1_row5_col1" class="empCol1Cont subRow">
+						<label for="supervised">Number and Titles of Employees you supervised:</label>
+                        <input type="text" name="supervised" >
+					</div>
+							
+					<div id="emp1_row5_col2" class="empCol2Cont subRow">
+						<label for="hours">Hours Per Week</label>   
+                        <input type="text" name="hours" maxlength="2">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				
+				<div id="emp1_row6_cont" class="rowCont">
+					<div id="emp1_row6_col1" class="empCol1Cont subRow">
+						<label for="leaving">Reason for leaving</label>
+                        <input type="text" name="leaving">
+					</div>
+					
+					<div id="emp1_row6_col2" class="empCol2Cont subRow">
+						<label for="hours">&nbsp;</label>
+					</div>
+					
+					<br class="clearfix" />
+				</div>  
+            </div>
+
+            <p>&nbsp;</p>
+            <button type="button" id="former_employer" name="btnemployer3" onclick="toggleEmployer('employer_3');">Employer 3</button>
+            <div id="employer_3" style="display:none;">
+                <div id="emp1_row1_cont" class="rowCont">
+					<div id="emp1_row1_col1" class="empCol1Cont">
+						<label for="employer">Present or last employer</label>
+                        <input type="text" name="employer">
+					</div>
+							
+					<div id="emp1_row1_col2" class="empCol2Cont">
+						<label for="telephone_number">Telephone Number</label>
+                        <input type="tel" name="telephone_number">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row2_cont" class="rowCont">
+					<div id="emp1_row2_col1" class="empCol1Cont subRow">
+						<label for="address">Complete Address:</label>
+                        <input type="text" name="address">
+					</div>
+							
+					<div id="emp1_row2_col2" class="empCol2Cont subRow">
+						<label for="supervisor">Supervisors Name and Title</label>   
+                        <input type="text" name="supervisor">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row3_cont" class="rowCont">
+					<div id="emp1_row3_col1" class="empCol1Cont subRow">
+						
+						
+						<div id="emp1_row3_inner" class="rowCont">
+							<div id="emp1_row3_icol1" class="empiCol1Cont">
+								<label for="from">From</label>
+								<input type="date" name="from">
+							</div>
+							
+							<div id="emp1_row3_icol2" class="empiCol2Cont">
+								<label for="to">To</label>
+								<input type="date" name="to">
+							</div>
+						
+							<br class="clearfix" />
+						</div>
+					</div>
+							
+					<div id="emp1_row3_col2" class="empCol2Cont subRow">
+						<label for="last_check">Last Weekly Pay:</label>
+                        <input type="text" name="last_check">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				
+				<div id="emp1_row4_cont" class="rowCont">
+					<div id="emp1_row4_col1" class="empCol1Cont subRow">
+						<label for="title">Your Title:</label>
+                        <input type="text" name="title">
+					</div>
+							
+					<div id="emp1_row4_col2" class="empCol2Cont subRow">
+						<label for="duties">Duties:</label>
+                        <input type="text" name="duties">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row5_cont" class="rowCont">
+					<div id="emp1_row5_col1" class="empCol1Cont subRow">
+						<label for="supervised">Number and Titles of Employees you supervised:</label>
+                        <input type="text" name="supervised" >
+					</div>
+							
+					<div id="emp1_row5_col2" class="empCol2Cont subRow">
+						<label for="hours">Hours Per Week</label>   
+                        <input type="text" name="hours" maxlength="2">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				
+				<div id="emp1_row6_cont" class="rowCont">
+					<div id="emp1_row6_col1" class="empCol1Cont subRow">
+						<label for="leaving">Reason for leaving</label>
+                        <input type="text" name="leaving">
+					</div>
+					
+					<div id="emp1_row6_col2" class="empCol2Cont subRow">
+						<label for="hours">&nbsp;</label>
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+            </div>
+
+            <p>&nbsp;</p>
+            <button type="button" id="former_employer" name="btnemployer4" onclick="toggleEmployer('employer_4');">Employer 4</button>
+            <div id="employer_4" style="display:none;">
+                <div id="emp1_row1_cont" class="rowCont">
+					<div id="emp1_row1_col1" class="empCol1Cont">
+						<label for="employer">Present or last employer</label>
+                        <input type="text" name="employer">
+					</div>
+							
+					<div id="emp1_row1_col2" class="empCol2Cont">
+						<label for="telephone_number">Telephone Number</label>
+                        <input type="tel" name="telephone_number">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row2_cont" class="rowCont">
+					<div id="emp1_row2_col1" class="empCol1Cont subRow">
+						<label for="address">Complete Address:</label>
+                        <input type="text" name="address">
+					</div>
+							
+					<div id="emp1_row2_col2" class="empCol2Cont subRow">
+						<label for="supervisor">Supervisors Name and Title</label>   
+                        <input type="text" name="supervisor">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row3_cont" class="rowCont">
+					<div id="emp1_row3_col1" class="empCol1Cont subRow">
+						
+						
+						<div id="emp1_row3_inner" class="rowCont">
+							<div id="emp1_row3_icol1" class="empiCol1Cont">
+								<label for="from">From</label>
+								<input type="date" name="from">
+							</div>
+							
+							<div id="emp1_row3_icol2" class="empiCol2Cont">
+								<label for="to">To</label>
+								<input type="date" name="to">
+							</div>
+						
+							<br class="clearfix" />
+						</div>
+					</div>
+							
+					<div id="emp1_row3_col2" class="empCol2Cont subRow">
+						<label for="last_check">Last Weekly Pay:</label>
+                        <input type="text" name="last_check">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				
+				<div id="emp1_row4_cont" class="rowCont">
+					<div id="emp1_row4_col1" class="empCol1Cont subRow">
+						<label for="title">Your Title:</label>
+                        <input type="text" name="title">
+					</div>
+							
+					<div id="emp1_row4_col2" class="empCol2Cont subRow">
+						<label for="duties">Duties:</label>
+                        <input type="text" name="duties">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				<div id="emp1_row5_cont" class="rowCont">
+					<div id="emp1_row5_col1" class="empCol1Cont subRow">
+						<label for="supervised">Number and Titles of Employees you supervised:</label>
+                        <input type="text" name="supervised" >
+					</div>
+							
+					<div id="emp1_row5_col2" class="empCol2Cont subRow">
+						<label for="hours">Hours Per Week</label>   
+                        <input type="text" name="hours" maxlength="2">
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+				
+				
+				<div id="emp1_row6_cont" class="rowCont">
+					<div id="emp1_row6_col1" class="empCol1Cont subRow">
+						<label for="leaving">Reason for leaving</label>
+                        <input type="text" name="leaving">
+					</div>
+					
+					<div id="emp1_row6_col2" class="empCol2Cont subRow">
+						<label for="hours">&nbsp;</label>
+					</div>
+					
+					<br class="clearfix" />
+				</div>
+            </div>    
+		</div>
+
+        <p>&nbsp;</p>
+		
+        <div id="more_info">
+            <label for="moreinfo">Note information not covered eslewhere which relates to your qualificationsor eligibility for this position:</label>
+                <input type="text" name="moreinfo">
+        </div>
+
+        <p>&nbsp;</p>
+        
+        <div id="emergency">
+                <label for="emergency">IN CASE OF AN EMERGENCY NOTIFY:</label>
+                    <input type="text" id="emer_cont" name="emergency" placeholder="NAME">
+                
+                <label for="relation">RELATIONSHIP:</label>
+                    <input type="text" id="relationship" name="relation">  
+                <br>
+                <br>
+                <label for="emer_phone">PHONE:</label>
+                    <input type="tel" id="emer_phone" name="emer_phone">
+                <label for="emer_address">ADDRESS:</label>
+                    <input type="text" id="emer_address" name="emer_address">  
+                <br>
+                <br>
+                <label for="nursing_employ">HAVE YOU <strong>EVER</strong> BEEN EMPLOYED BY CARIBOU NURSING HOME, CARIBOU REHAB  and NURSING CENTER, PRESQUE ISLE NURSING HOME, PRESQUE ISLE REHAB and NURSING CENTER, LEISURE GARDENS/VILLAGE, OR PRESQUE ISLE HOME CARE?
+                </label>
+                <br>
+                <input type="radio" id="nursing_employ_yes" name="nursing_employ" value="yes"> YES
+                <input type="radio" id="nursing_employ_no" name="nursing_employ" value="no"> NO
+                
+                <br>
+                <br>
+                <label for="referal">REFERAL SOURCE:</label>
+                <input type="radio" id="advertising" name="referal" value="advertising"> Advertising
+                <input type="radio" id="friend" name="referal" value="friend"> Friend
+                <input type="radio" id="relative" name="referal" value="relative"> Relative
+                <input type="radio" id="web" name="referal" value="web"> Caribou Rehab and Nursing Center Web site
+                <br>
+                <input type="radio" id="other" name="referal" value="other"> Other On-line Service
+                <input type="radio" id="employee" name="referal" value="employee"> Caribou Rehab and Nursing Center employee:
+                <input type="text" id="employee_name" name="referal" placeholder="Name">
+
+        </div>
+
+        <p>&nbsp;</p>
+		
+        <div id="final">
+            <h3>PAST EMPLOYERS WILL BE CONTACTED FOR WORK REFERENCES UNLESS SPECIFICALLY REQUESTED OTHERWISE BY THE APPLICANT.</h3>
+                <label for="inquiry">MAY WE MAKE INQUIREIES OF YOUR PRESENT EMPLOYER?</label>
+                <br>
+                <input type="radio" name="inquiry" id="inquiry_yes" value="yes">Yes
+                <input type="radio" name="inquiry" id="inquiry_no" value="no"> No 
+                <br>
+                <br>
+                <label for="new_name">IF PRIOR EMPLOYERS KNOW YOU UNDER A DIFFERENT LAST NAME, PLEASE SPECIFY:</label>
+                <input type="text" name="new_name">
+        </div>
+
+        <br>
+        
+        <div id="terms">
+            <p>ALL APPLICANTS WHO ARE OFFERED EMPLOYMENT WITH THE CARIBOU REHAB AND NURSING CENTER WILL BE SUBJECT TO A CRIMINAL BACKGROUND CHECK AND A JOB-RELATED PHYSICAL EXAM.  EMPLOYMENT IS CONDITIONED ON THE RESULTS OF THE BACKGROUND CHECK AND THE SUCCESSFUL PASSAGE OF THE PHYSICAL EXAM.</p>
+            
+            
+            <p>
+                I, the undersigned, authorize the Caribou Rehab and Nursing Center to contact references, employers, schools, persons, law enforcement agencies and any other sources of information which may be relevant to my application for employment, and to investigate all statements contained in this application.  I recognize that the information provided by such sources of information may result in a decision not to hire me or to terminate my employment.  Further, I release from all liability or responsibility all persons, companies or corperationssupplying such information.  I affirm that the information in this application is true and complete.  I understand that if I provide flase statements or make omissions of facts called for on this application I will not be hired, and if I am employed, such false statements or omissions will be cause for dismissal.  I understand that any employment I am offered at the Caribou Rehab and Nursing Center is at-will.  This means that I will be free to terminate my employment, within my discretion, at any time.  The Caribou Rehab and Nursing Center will have the same right, within its discretion, to terminate my employment, with or without cause, at any time.  I expressly agree and understand that this at-will employment may be changed only by an agreement in writing signed by the President of the company.
+                <br>
+                <br>
+                If I am offered a job with the Caribou Rehab and Nursing Center, I will follow its rules, policies and procedures.
+                
+            </p>
+            
+			<p>&nbsp;</p>
+			
+            <h3>I HAVE READ, UNDERSTAND AND AGREE TO THE PROVISIONS OF THIS APPLICATION.</h3>
+
+            <label for="signature">I AGREE TO REVIEW AND SIGN THIS APPLICATION AT THE TIME OF MY INTERVIEW.</label>
+            <br>
+                <input type="radio" id="sig_yes" name="signature" value="yes">YES
+                <input type="radio" id="sig_no" name="signature" value="no">NO
+
+        </div>
+
+        <div id="disclaimer">
+            <p>CARIBOU REHAB and NURSING CENTER IS AN EQUAL OPPORTUNITY EMPLOYER AND IS PLEDGED TO FULFILL ALL APPLICABLE PROVISIONS OF FEDERAL AND STATE EMPLOYMENT REGULATION.  ACCORDINGLY, THERE IS NO DISCRIMINATION IN HIRING OR WITH REGARD TO ANY OTHER TERMS AND CONDITIONS OF EMPLOYMENT DUE TO SEX, SEXUAL ORIENTATION, AGE, RACE, PHYSICAL OR MENTAL HANDICAP, RELIGION OR NATIONAL ORIGIN.</p>
+        </div>
+		
+		</form>
+		
+  </div> 
+</body>
+</html>
