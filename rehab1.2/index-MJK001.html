@@ -21,6 +21,20 @@
 		}
 	</script>
 
+<script type="text/javascript">
+    function toggleMail(mail){
+        if(document.getElementById(mail)){
+            var s = document.getElementById(mail).style.display;
+            if(s == "block"){
+                document.getElementById(mail).style.display="none";
+            } else {
+                document.getElementById(mail).style.display="block";
+                document.getElementById(mail).style.width="100%";
+            }
+        }
+    }
+</script>
+
 </head>
 <body>
   <!-- body of the application with an overall width of 900 px -->
@@ -45,63 +59,101 @@
         <br>
         <br>
 		<form id="empform">
-			<div id="personal_info">
-                <!--name field-->
-                <div id="name_date" class="pers_cont">    
-                    <div id="name" class="row_cont">
+		    <div id="pers_info">
+               <div id="pers_row1_cont" class="rowCont">
+                    <div id="pers_row1_col1" class="pers_col1">
                         <label for="name">NAME:</label>
                         <input type="text" id="name" name="name" placeholder="Last First M.I.">
                     </div>
-                    <div id="date" class="pers_cont">           
+                                
+                    <div id="pers_row1_col2" class="pers_col2">
                         <label for="date">DATE:</label>
-                        <input type="date" id="date" name="date"><br><br>
+                        <input type="date" id="date" name="date">   
                     </div>
-                    <br class="clearfix" />    
-                </div>    
-                <!--mailing address container-->
-                <div id="contact" class="pers_cont">
-                    <div id="street" class="row_cont">
+                        
+                    <br class="clearfix" />
+                </div>
+                    
+                <div id="pers_row2_cont" class="rowCont">
+                    <div id="pers_row2_col1" class="pers_col1 subRow">
                         <label for="streetaddress">STREET ADDRESS:</label>
                         <input type="text" id="street" name="streetaddress">
-                    </div>  
-                    <div id="mail" >
-                        <label for="mailingaddress">MAILING ADDRESS:</label>
-                        <input type="text" id="mailing" name="mailingaddress"><br><br>
                     </div>
-                    <br class="clearfix" />    
-                </div>
-                 <!--city state zip container-->   
-                <div id="local" class="local">
-                    <div id="city" class="local_col_1">
+                                
+                    <div id="pers_row2_col2" class="pers_col2 subRow">
                         <label for="city">CITY:</label>
                         <input type="text" id="city" name="city">
                     </div>
-                    <div id="state" class="local_col_2">
+                        
+                    <br class="clearfix" />
+                </div>
+                    
+                <div id="pers_row2_cont" class="rowCont">
+                    <div id="pers_row2_col1" class="pers_col1 subRow">
                         <label for="state">STATE:</label>
                         <input type="text" id="state" name="state" maxlength="2">
                     </div>
-                    <div id="zip" class="local_col_3">
+                                
+                    <div id="pers_row2_col2" class="pers_col2 subRow">
                         <label for="zip">ZIP CODE:</label>
                         <input type="text" name="zip" id="zip" maxlength="5">
                     </div>
+                        
                     <br class="clearfix" />
-                    <br>
                 </div>
-                <!--telephone number container-->   
-                <div id="phone" class="phone">    
-                    <div id="home_phone" class="phone_col_1">
+
+                <div id="emp1_row2_cont" class="rowCont">
+                    <div id="emp1_row2_col1" class="pers_col1 subRow">
                         <label for="homephone">HOME TELEPHONE #:</label>
-                        <input type="tel" name="homephone" id="homephone" placeholder="(xxx)-xxx-xxxx">
+                        <input type="tel" name="homephone" id="homephone" placeholder="(xxx)-xxx-xxxx" maxlength="20">
                     </div>
-                    <div id="cell_phone" class="phone_col_2">
+                                
+                    <div id="emp1_row2_col2" class="pers_col2 subRow">
                         <label for="cellphone">CELL PHONE #:</label>
-                        <input type="tel" name="cellphone" id="cellphone" placeholder="(xxx)-xxx-xxxx">
+                        <input type="tel" name="cellphone" id="cellphone" placeholder="(xxx)-xxx-xxxx" maxlength="20">
                     </div>
+                        
                     <br class="clearfix" />
                 </div>
-			</div>
-			<p>&nbsp;</p>
-			
+                 <br />
+                
+                 <button type="button" id="mail_add" name="btnmail" onclick="toggleMail('mail');"> Mailing Address </button>
+                <br>
+                <div id="mail"  style="display: none;">
+                    <div id="pers_row2_cont" class="rowCont">
+                        <div id="pers_row2_col1" class="pers_col1 subRow">
+                            <label for="streetaddress">MAILING ADDRESS:</label>
+                            <input type="text" id="street" name="streetaddress">
+                        </div>
+                                
+                        <div id="pers_row2_col2" class="pers_col2 subRow">
+                            <label for="city">CITY:</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                        
+                        <br class="clearfix" />
+                    </div>
+                    
+                    <div id="pers_row2_cont" class="rowCont">
+                        <div id="pers_row2_col1" class="pers_col1 subRow">
+                            <label for="state">STATE:</label>
+                            <input type="text" id="state" name="state" maxlength="2">
+                        </div>
+                                
+                        <div id="pers_row2_col2" class="pers_col2 subRow">
+                            <label for="zip">ZIP CODE:</label>
+                            <input type="text" name="zip" id="zip" maxlength="5">
+                        </div>
+                        
+                        <br class="clearfix" />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                
+            </div>
+            <br>
+            <br>
         <!--section outlining what the applicant would like to get out of this job-->
 			<div id="job_info">
                 <label for="eligible">ARE YOU ELIGIBLE TO BE LAWFULLY EMPLOYED IN THE U.S.?&nbsp;&nbsp;<span class="subTextSpan">(Proof of citizenship or eligibility to work in the USA is required upon employment).</span></label>
@@ -114,6 +166,9 @@
                 <label for="position">POSITION DESIRED:</label>
                 <input type="text" name="position" id="position">
 
+                <br>
+                <br>
+
                 <label for="salary">SALARY DESIRED:</label>
                 <input type="text" name="salary" id="salary">
                 
@@ -125,8 +180,9 @@
                 <input type="radio" name="time" id="casual_time" value="casual_time"> CASUAL PART TIME (0-15 hrs. week)
                 <br>
                 <br>
-                <div id="shifts">
+                
                 <label for="shift">SHIFTS DESIRED:</label>
+                <div id="shifts">
                     <div class="shifts">
                         <p>DAY</p> <input type="checkbox" name="day" id="day" value="day">
                     </div>
@@ -222,7 +278,7 @@
                 <p><b>School 1</b></p>
                 <div id="school_1">
                     <div id="schl_row_1" class="schl_row_1">
-                        <div id="sch_row1_col_1" class="schl_name">
+                        <div id="schl_row1_col_1" class="schl_name">
                             <label for="school_name">School Name</label>
                             <input type="text" id="school_name" name="school_name" placeholder="School Name">
                         </div>
@@ -232,25 +288,28 @@
                         </div>
                     <br class="clearfix" />
                     </div>
-                    <br>
+                    
                     <div id="schl_row_2" class="schl_row_2">
-                        <div id="schl_row2_col1" class="graduate">
-                            <label for="major">Did You Graduate</label>
-                            <input type="radio" name="major" id="major" value="yes">Yes
-                            <input type="radio" name="major" id="major" value="no">No
+                        <div id="schl_row2_col1" class="graduate subRow">
+                            <div class="yes">
+                                <label for="major">Did You Graduate</label>
+                                <input type="radio" name="major" id="major" value="yes" />Yes
+                                <input type="radio" name="major" id="major" value="no" />No
+                            </div>    
                         </div>
-                        <div id="schl_row2_col2" class="degree">
+                        <div id="schl_row2_col2" class="degree subRow">
                             <label for="degree">Degree</label>
                             <input type="text" id="degree" name="degree" placeholder="Degree">
                         </div>
                     <br class="clearfix" />    
                     </div>
                 </div>
-
+                <br>
+                <br>
                 <p><b>School 2</b></p>
                 <div id="school_2">
                     <div id="schl_row_1" class="schl_row_1">
-                        <div id="sch_row1_col_1" class="schl_name">
+                        <div id="schl_row1_col_1" class="schl_name">
                             <label for="school_name">School Name</label>
                             <input type="text" id="school_name" name="school_name" placeholder="School Name">
                         </div>
@@ -260,25 +319,28 @@
                         </div>
                     <br class="clearfix" />
                     </div>
-                    <br>
+                    
                     <div id="schl_row_2" class="schl_row_2">
-                        <div id="schl_row2_col1" class="graduate">
-                            <label for="major">Did You Graduate</label>
-                            <input type="radio" name="major" id="major" value="yes">Yes
-                            <input type="radio" name="major" id="major" value="no">No
+                        <div id="schl_row2_col1" class="graduate subRow">
+                            <div class="yes">
+                                <label for="major">Did You Graduate</label>
+                                <input type="radio" name="major" id="major" value="yes" />Yes
+                                <input type="radio" name="major" id="major" value="no" />No
+                            </div>   
                         </div>
-                        <div id="schl_row2_col2" class="degree">
+                        <div id="schl_row2_col2" class="degree subRow">
                             <label for="degree">Degree</label>
                             <input type="text" id="degree" name="degree" placeholder="Degree">
                         </div>
                     <br class="clearfix" />    
                     </div>
                 </div>
-
-                <p><b>School 2</b></p>
-                <div id="school_2">
+                <br />
+                <br />
+                <p><b>School 3</b></p>
+                <div id="school_3">
                     <div id="schl_row_1" class="schl_row_1">
-                        <div id="sch_row1_col_1" class="schl_name">
+                        <div id="schl_row1_col_1" class="schl_name">
                             <label for="school_name">School Name</label>
                             <input type="text" id="school_name" name="school_name" placeholder="School Name">
                         </div>
@@ -288,14 +350,17 @@
                         </div>
                     <br class="clearfix" />
                     </div>
-                    <br>
+                    
                     <div id="schl_row_2" class="schl_row_2">
-                        <div id="schl_row2_col1" class="graduate">
-                            <label for="major">Did You Graduate</label>
-                            <input type="radio" name="major" id="major" value="yes">Yes
-                            <input type="radio" name="major" id="major" value="no">No
+                        <div id="schl_row2_col1" class="graduate subRow">
+                            <div class="yes">
+                                <label for="major">Did You Graduate</label>
+                                <input type="radio" name="major" id="major" value="yes" />Yes
+                                <input type="radio" name="major" id="major" value="no" />No
+                            </div>   
                         </div>
-                        <div id="schl_row2_col2" class="degree">
+                        
+                        <div id="schl_row2_col2" class="degree subRow">
                             <label for="degree">Degree</label>
                             <input type="text" id="degree" name="degree" placeholder="Degree">
                         </div>
@@ -729,14 +794,19 @@
                 <label for="emergency">IN CASE OF AN EMERGENCY NOTIFY:</label>
                     <input type="text" id="emer_cont" name="emergency" placeholder="NAME">
                 
-                <label for="relation">RELATIONSHIP:</label>
-                    <input type="text" id="relationship" name="relation">  
+                <div id="emer_rel" class="subRow">
+                    <label for="relation">RELATIONSHIP:</label>
+                    <input type="text" id="relationship" name="relation">
+                </div>   
                 <br>
-                <br>
+                
                 <label for="emer_phone">PHONE:</label>
                     <input type="tel" id="emer_phone" name="emer_phone">
-                <label for="emer_address">ADDRESS:</label>
+                
+                <div id="emer_address" class="subRow">
+                    <label for="emer_address">ADDRESS:</label>
                     <input type="text" id="emer_address" name="emer_address">  
+                </div>    
                 <br>
                 <br>
                 <label for="nursing_employ">HAVE YOU <strong>EVER</strong> BEEN EMPLOYED BY CARIBOU NURSING HOME, CARIBOU REHAB  and NURSING CENTER, PRESQUE ISLE NURSING HOME, PRESQUE ISLE REHAB and NURSING CENTER, LEISURE GARDENS/VILLAGE, OR PRESQUE ISLE HOME CARE?
