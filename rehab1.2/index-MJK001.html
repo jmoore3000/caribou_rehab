@@ -9,6 +9,34 @@
     <title>Employment Application</title>
 	
 	<script type="text/javascript">
+        function toggleMail(mail){
+            if(document.getElementById(mail)){
+                var s = document.getElementById(mail).style.display;
+                if(s == "block"){
+                    document.getElementById(mail).style.display="none";
+                } else {
+                    document.getElementById(mail).style.display="block";
+                    document.getElementById(mail).style.width="100%";
+                }
+            }
+        }
+    </script>
+    
+    
+    <script type="text/javascript">
+		function toggleSchool(schlnum){
+			if(document.getElementById(schlnum)){
+				var s = document.getElementById(schlnum).style.display;
+				if(s == "block"){
+					document.getElementById(schlnum).style.display="none";
+				} else {
+					document.getElementById(schlnum).style.display="block";
+				}
+			}
+		}
+	</script>
+
+    <script type="text/javascript">
 		function toggleEmployer(empnum){
 			if(document.getElementById(empnum)){
 				var s = document.getElementById(empnum).style.display;
@@ -21,19 +49,7 @@
 		}
 	</script>
 
-<script type="text/javascript">
-    function toggleMail(mail){
-        if(document.getElementById(mail)){
-            var s = document.getElementById(mail).style.display;
-            if(s == "block"){
-                document.getElementById(mail).style.display="none";
-            } else {
-                document.getElementById(mail).style.display="block";
-                document.getElementById(mail).style.width="100%";
-            }
-        }
-    }
-</script>
+
 
 </head>
 <body>
@@ -63,12 +79,12 @@
                <div id="pers_row1_cont" class="rowCont">
                     <div id="pers_row1_col1" class="pers_col1">
                         <label for="name">NAME:</label>
-                        <input type="text" id="name" name="name" placeholder="Last First M.I.">
+                        <input type="text" id="name" class="pers_txt" name="name" placeholder="Last First M.I.">
                     </div>
                                 
                     <div id="pers_row1_col2" class="pers_col2">
                         <label for="date">DATE:</label>
-                        <input type="date" id="date" name="date">   
+                        <input type="text" id="date" class="pers_txt" name="date">   
                     </div>
                         
                     <br class="clearfix" />
@@ -77,12 +93,12 @@
                 <div id="pers_row2_cont" class="rowCont">
                     <div id="pers_row2_col1" class="pers_col1 subRow">
                         <label for="streetaddress">STREET ADDRESS:</label>
-                        <input type="text" id="street" name="streetaddress">
+                        <input type="text" id="street" class="pers_txt" name="streetaddress">
                     </div>
                                 
                     <div id="pers_row2_col2" class="pers_col2 subRow">
                         <label for="city">CITY:</label>
-                        <input type="text" id="city" name="city">
+                        <input type="text" id="city" class="pers_txt" name="city">
                     </div>
                         
                     <br class="clearfix" />
@@ -91,12 +107,12 @@
                 <div id="pers_row2_cont" class="rowCont">
                     <div id="pers_row2_col1" class="pers_col1 subRow">
                         <label for="state">STATE:</label>
-                        <input type="text" id="state" name="state" maxlength="2">
+                        <input type="text" id="state" class="pers_txt" name="state">
                     </div>
                                 
                     <div id="pers_row2_col2" class="pers_col2 subRow">
                         <label for="zip">ZIP CODE:</label>
-                        <input type="text" name="zip" id="zip" maxlength="5">
+                        <input type="text" name="zip" id="zip" class="pers_txt" maxlength="5">
                     </div>
                         
                     <br class="clearfix" />
@@ -105,12 +121,12 @@
                 <div id="emp1_row2_cont" class="rowCont">
                     <div id="emp1_row2_col1" class="pers_col1 subRow">
                         <label for="homephone">HOME TELEPHONE #:</label>
-                        <input type="tel" name="homephone" id="homephone" placeholder="(xxx)-xxx-xxxx" maxlength="20">
+                        <input type="tel" name="homephone" id="homephone" class="pers_txt" placeholder="(xxx)-xxx-xxxx" maxlength="20">
                     </div>
                                 
                     <div id="emp1_row2_col2" class="pers_col2 subRow">
                         <label for="cellphone">CELL PHONE #:</label>
-                        <input type="tel" name="cellphone" id="cellphone" placeholder="(xxx)-xxx-xxxx" maxlength="20">
+                        <input type="tel" name="cellphone" id="cellphone" class="pers_txt" placeholder="(xxx)-xxx-xxxx" maxlength="20">
                     </div>
                         
                     <br class="clearfix" />
@@ -306,8 +322,11 @@
                 </div>
                 <br>
                 <br>
-                <p><b>School 2</b></p>
-                <div id="school_2">
+                
+                <button type="button" id="former_employer" name="btnschool2" onclick="toggleSchool('school_2');"> School 2</button>
+                
+                <div id="school_2" style="display: none;">
+                    <p><b>School 2</b></p>
                     <div id="schl_row_1" class="schl_row_1">
                         <div id="schl_row1_col_1" class="schl_name">
                             <label for="school_name">School Name</label>
@@ -337,8 +356,10 @@
                 </div>
                 <br />
                 <br />
-                <p><b>School 3</b></p>
-                <div id="school_3">
+                <button type="button" id="former_employer" name="btnschool2" onclick="toggleSchool('school_3');"> School 3</button>
+                
+                <div id="school_3" style="display: none;">
+                    <p><b>School 3</b></p>
                     <div id="schl_row_1" class="schl_row_1">
                         <div id="schl_row1_col_1" class="schl_name">
                             <label for="school_name">School Name</label>
